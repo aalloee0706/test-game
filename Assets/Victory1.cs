@@ -11,16 +11,22 @@ public class Victory1 : MonoBehaviour
     public int HitClick = 0;
     public int GetHitClick = 0;
 
+    GoldScript goldScript;
+    public GameObject GetGold1Win;
+
     private void Awake()
     {
         HitUI.SetActive(false);
         GetHitUI.SetActive(false);
+        goldScript = GetGold1Win.GetComponent<GoldScript>();
     }
     private void OnEnable()
     {
         Debug.Log("Victory1");
         HitUI.SetActive(true);
         GetHitUI.SetActive(true);
+        goldScript.Gold1 += 1;
+        goldScript.Gold2 += 2;
     }
 
     private void Update()

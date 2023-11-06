@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GetHit2 : MonoBehaviour
 {
-    public float Health2 = 50;
+    public float Health2 = 100;
     float timer = 0;
     // Start is called before the first frame update
     private void OnEnable()

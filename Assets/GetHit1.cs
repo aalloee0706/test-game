@@ -6,7 +6,7 @@ public class GetHit1 : MonoBehaviour
 {
     public int ComboCount1 = 0;
     public int ComboCount2 = 0;
-    public float Health1 = 50;
+    public float Health1 = 100;
     float timer = 0;
     // Start is called before the first frame update
     private void OnEnable()

@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 370976547}
   - component: {fileID: 370976548}
   m_Layer: 0
-  m_Name: Combo2_item1
+  m_Name: ComboDouble_item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3226,6 +3226,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2086995252}
   - component: {fileID: 2086995253}
+  - component: {fileID: 2086995258}
+  - component: {fileID: 2086995257}
+  - component: {fileID: 2086995255}
+  - component: {fileID: 2086995254}
   m_Layer: 0
   m_Name: GoldSystem
   m_TagString: Untagged
@@ -3264,8 +3268,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d6160801d487140a81c1c3e1db1cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gold1: 10
-  Gold2: 10
+  Gold1: 100
+  Gold2: 100
+--- !u!114 &2086995254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086995250}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943ef975ad3307346a64407541d35ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2086995255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086995250}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017effc46dc1808498ff251872ff17e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2086995257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086995250}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2abb19c3261e154c81acd4fb199bb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2086995258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086995250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020451520bd5fa04092ef7de4413a082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Iceitem1: {fileID: 979927785}
+  Hpitem1: {fileID: 1496327567}
+  VictoryRockitem1: {fileID: 2022063584}
+  ComboDoubleitem1: {fileID: 370976546}
+  IceClick: 0
+  HpClick: 0
+  VictoryRockClick: 0
+  ComboDoubleClick: 0
+  Hp1: {fileID: 7392992}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

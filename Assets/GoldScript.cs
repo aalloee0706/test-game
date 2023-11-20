@@ -8,8 +8,8 @@ public class GoldScript : MonoBehaviour
     public int Gold2;
     void Awake()
     {
-        Gold1 = 10;
-        Gold2 = 10;
+        Gold1 = 100;
+        Gold2 = 100;
     }
 
     void Update()

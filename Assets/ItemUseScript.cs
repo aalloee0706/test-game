@@ -13,16 +13,31 @@ public class ItemUseScript : MonoBehaviour
     public int HpClick = 0;
     public int VictoryRockClick = 0;
     public int ComboDoubleClick = 0;
+    [SerializeField]
+    public bool IceUsed1;
+
+    [SerializeField]
+    float timer = 0;
 
     GetHit1 gethit1;
+
     public GameObject Hp1;
-    UseVictoryRockitem1 useVictoryRockitem1;
+
     private void Awake()
     {
         gethit1 = Hp1.GetComponent<GetHit1>();
+
+        IceUsed1 = false;
+        timer = 0;
     }
     public void Update()
     {
+        timer += Time.deltaTime;
+        if (timer > 0.5)
+        {
+            IceUsed1 = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             IceClick += 1;
@@ -86,6 +101,8 @@ public class ItemUseScript : MonoBehaviour
             {
                 Iceitem1.transform.localScale = new Vector3(0.5f, 0.5f);
                 GetComponent<GoldScript>().Gold1 -= 10;
+                timer = 0;
+                IceUsed1 = true;
                 IceClick = 0;
             }
             else
@@ -129,6 +146,7 @@ public class ItemUseScript : MonoBehaviour
             {
                 ComboDoubleitem1.transform.localScale = new Vector3(0.5f, 0.5f);
                 GetComponent<GoldScript>().Gold1 -= 15;
+                gethit1.ComboCount1 *= 2;
                 ComboDoubleClick = 0;
             }
             else

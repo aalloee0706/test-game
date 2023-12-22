@@ -25,8 +25,8 @@ public class Victory1 : MonoBehaviour
         Debug.Log("Victory1");
         HitUI.SetActive(true);
         GetHitUI.SetActive(true);
-        goldScript.Gold1 += 1;
-        goldScript.Gold2 += 2;
+        goldScript.Gold1 += 2;
+        goldScript.Gold2 += 3;
     }
 
     private void Update()

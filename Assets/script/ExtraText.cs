@@ -9,6 +9,14 @@ public class ExtraText : MonoBehaviour
     public Text Combo2Text;
     public Text Health1Text;
     public Text Health2Text;
+    public Text Gold1Text;
+    public Text Gold2Text;
+    GoldScript goldScript;
+    public GameObject gold;
+    private void Awake()
+    {
+        goldScript = gold.GetComponent<GoldScript>();
+    }
 
     private void Update()
     {
@@ -16,5 +24,8 @@ public class ExtraText : MonoBehaviour
         Combo2Text.text = "Combo" + " " + GetComponent<GetHit1>().ComboCount2.ToString();
         Health1Text.text = "HP:" + " " + GetComponent<GetHit1>().Health1.ToString();
         Health2Text.text = "HP:" + " " + GetComponent<GetHit2>().Health2.ToString();
+
+        Gold1Text.text = goldScript.Gold1.ToString();
+        Gold2Text.text = goldScript.Gold2.ToString();
     }
 }

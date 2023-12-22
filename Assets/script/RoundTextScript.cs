@@ -8,6 +8,6 @@ public class RoundTextScript : MonoBehaviour
     public Text RoundText;
     void Update()
     {
-        RoundText.text = "ROUND" + " " + GetComponent<ChangeRound>().RoundCount.ToString();
+        RoundText.text = GetComponent<ChangeRound>().RoundCount.ToString() + " " + "¶ó¿îµå";
     }
 }

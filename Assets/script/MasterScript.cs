@@ -9,9 +9,16 @@ public class MasterScript : MonoBehaviour
     public GameObject Scissor;
     public GameObject Paper;
 
+    private void Start()
+    {
+        Screen.SetResolution(Screen.width, (Screen.width * 16) / 9, true);
+    }
     private void OnEnable()
     {
         GetComponent<ChangeRound>().enabled = false;
+        Rock.transform.localScale = new Vector3(1, 1, 1);
+        Scissor.transform.localScale = new Vector3(1, 1, 1);
+        Paper.transform.localScale = new Vector3(1, 1, 1);
     }
     private void Update()
     {

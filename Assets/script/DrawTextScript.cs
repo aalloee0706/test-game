@@ -25,7 +25,7 @@ public class DrawTextScript : MonoBehaviour
 
         else if (shortTimer < 3)
         {
-            DrawText.text = "DRAW";
+            DrawText.text = "¹«½ÂºÎ";
         }
     }
 }

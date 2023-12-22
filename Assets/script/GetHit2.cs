@@ -6,19 +6,27 @@ public class GetHit2 : MonoBehaviour
 {
     public float Health2 = 100;
     float timer = 0;
-    // Start is called before the first frame update
+    public GameObject itemscript;
+    itemUseScript itemuseScript;
+
+    private void Awake()
+    {
+        itemuseScript = itemscript.GetComponent<itemUseScript>();
+    }
     private void OnEnable()
     {
-        Health2 -= Mathf.Pow(GetComponent<GetHit1>().ComboCount1, 2) + GetComponent<GetHit1>().ComboCount1 + 5;
+        if (itemuseScript.IceUsed2 == false)
+        {
+            Health2 -= Mathf.Pow(GetComponent<GetHit1>().ComboCount1, 2) + GetComponent<GetHit1>().ComboCount1 + 5;
+            GetComponent<GetHit1>().ComboCount2 += 1;
+        }
 
         timer = 0;
-        GetComponent<GetHit1>().ComboCount2 += 1;
         GetComponent<GetHit1>().ComboCount1 = 0;
         GetComponent<Hit1>().enabled = false;
         GetComponent<Hit2>().enabled = false;
     }
 
-    // Update is called once per frame
     private void Update()
     {
         timer += Time.deltaTime;

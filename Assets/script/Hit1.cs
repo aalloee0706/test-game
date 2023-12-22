@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Hit1 : MonoBehaviour
 {
+    public Animator anime2;
     float timer = 0;
-    // Start is called before the first frame update
+
     private void OnEnable()
     {
         timer = 0;
         GetComponent<Victory1>().enabled = false;
         GetComponent<Victory2>().enabled = false;
+        anime2.SetTrigger("hit");
+        anime2.transform.position = new Vector3(1.78f, -0.81f, 0);
     }
 
     // Update is called once per frame

@@ -41,6 +41,8 @@ public class itemUseScript : MonoBehaviour
     public GameObject Hp2;
     public GameObject Masterscipt1;
     public GameObject Masterscipt2;
+    public Animator anime1;
+    public Animator anime2;
 
     private void Awake()
     {
@@ -50,7 +52,8 @@ public class itemUseScript : MonoBehaviour
         masterScript2 = Masterscipt2.GetComponent<Master_Script>();
         
 
-        IceUsed1 = false;
+        anime1.SetBool("ice", false);
+        anime2.SetBool("ice", false);
         timer = 0;
         timer2 = 0;
     }
@@ -59,14 +62,14 @@ public class itemUseScript : MonoBehaviour
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
 
-        if (timer > 0.5)
+        if (timer > 1)
         {
-            IceUsed1 = false;
+            anime1.SetBool("ice", false);
         }
 
-        if (timer2 > 0.5)
+        if (timer2 > 1)
         {
-            IceUsed2 = false;
+            anime2.SetBool("ice", false);
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -89,7 +92,7 @@ public class itemUseScript : MonoBehaviour
                 {
                     GetComponent<GoldScript>().Gold1 -= 10;
                     timer = 0;
-                    IceUsed1 = true;
+                    anime1.SetBool("ice", true);
                 }
                 IceClick1 = 0;
             }
@@ -191,7 +194,7 @@ public class itemUseScript : MonoBehaviour
                 {
                     GetComponent<GoldScript>().Gold2 -= 10;
                     timer2 = 0;
-                    IceUsed2 = true;
+                    anime2.SetBool("ice", true);
                 }
                 IceClick2 = 0;
             }

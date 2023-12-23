@@ -13,6 +13,7 @@ public class ExtraText : MonoBehaviour
     public Text Gold2Text;
     GoldScript goldScript;
     public GameObject gold;
+
     private void Awake()
     {
         goldScript = gold.GetComponent<GoldScript>();

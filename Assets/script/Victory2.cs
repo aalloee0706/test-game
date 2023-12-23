@@ -24,8 +24,8 @@ public class Victory2 : MonoBehaviour
         Debug.Log("Victory2");
         HitUI.SetActive(true);
         GetHitUI.SetActive(true);
-        GetGold2Win.GetComponent<GoldScript>().Gold2 += 2;
-        GetGold2Win.GetComponent<GoldScript>().Gold1 += 3;
+        GetGold2Win.GetComponent<GoldScript>().Gold2 += 1;
+        GetGold2Win.GetComponent<GoldScript>().Gold1 += 1;
     }
 
     private void Update()

@@ -13,7 +13,7 @@ public class Hit2 : MonoBehaviour
         GetComponent<Victory1>().enabled = false;
         GetComponent<Victory2>().enabled = false;
         anime1.SetTrigger("hit");
-        anime1.transform.position = new Vector3(-1.78f, -0.81f, 0);
+        anime1.transform.position = new Vector3(-0.8f, -0.81f, 0);
     }
 
     private void Update()

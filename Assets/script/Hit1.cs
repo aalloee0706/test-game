@@ -13,7 +13,7 @@ public class Hit1 : MonoBehaviour
         GetComponent<Victory1>().enabled = false;
         GetComponent<Victory2>().enabled = false;
         anime2.SetTrigger("hit");
-        anime2.transform.position = new Vector3(1.78f, -0.81f, 0);
+        anime2.transform.position = new Vector3(0.8f, -0.81f, 0);
     }
 
     // Update is called once per frame

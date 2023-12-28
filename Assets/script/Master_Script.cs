@@ -14,6 +14,10 @@ public class Master_Script : MonoBehaviour
         Scissor.transform.localScale = new Vector3(1, 1, 1);
         Paper.transform.localScale = new Vector3(1, 1, 1);
     }
+    private void start()
+    {
+        Time.timeScale = 1;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow) && Rock.transform.localScale.x == 1)

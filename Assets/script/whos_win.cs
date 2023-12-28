@@ -1,19 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class healthBar : MonoBehaviour
+public class whos_win : MonoBehaviour
 {
-    public Slider player1_hp;
-    public Slider player2_hp;
+    public float hp1, hp2;
     public GameObject player1_win;
     public GameObject player2_win;
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1;
         player1_win.SetActive(false);
         player2_win.SetActive(false);
     }
@@ -21,14 +17,12 @@ public class healthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player1_hp.value = GetComponent<GetHit1>().Health1;
-        player2_hp.value = GetComponent<GetHit2>().Health2;
         if (GetComponent<GetHit2>().Health2 <= 0f)
         {
             Time.timeScale = 0;
             player1_win.SetActive(true);
         }
-        else if(GetComponent<GetHit1>().Health1 <= 0)
+        else if (GetComponent<GetHit1>().Health1 <= 0)
         {
             Time.timeScale = 0;
             player2_win.SetActive(true);

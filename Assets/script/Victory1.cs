@@ -8,6 +8,9 @@ public class Victory1 : MonoBehaviour
     private GameObject HitUI;
     [SerializeField]
     private GameObject GetHitUI;
+
+    public GameObject A;
+    public GameObject D;
     public int HitClick = 0;
     public int GetHitClick = 0;
 
@@ -18,6 +21,8 @@ public class Victory1 : MonoBehaviour
     {
         HitUI.SetActive(false);
         GetHitUI.SetActive(false);
+        A.SetActive(false);
+        D.SetActive(false);
         goldScript = GetGold1Win.GetComponent<GoldScript>();
     }
     private void OnEnable()
@@ -25,6 +30,8 @@ public class Victory1 : MonoBehaviour
         Debug.Log("Victory1");
         HitUI.SetActive(true);
         GetHitUI.SetActive(true);
+        A.SetActive(true);
+        D.SetActive(true);
         goldScript.Gold1 += 2;
         goldScript.Gold2 += 3;
     }
@@ -69,6 +76,8 @@ public class Victory1 : MonoBehaviour
             GetHitUI.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             HitUI.SetActive(false);
             GetHitUI.SetActive(false);
+            A.SetActive(false);
+            D.SetActive(false);
         }
         if (Input.GetKeyDown("d") && GetHitClick == 2)
         {
@@ -77,6 +86,8 @@ public class Victory1 : MonoBehaviour
             GetHitUI.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             HitUI.SetActive(false);
             GetHitUI.SetActive(false);
+            A.SetActive(false);
+            D.SetActive(false);
         }
     }
 }

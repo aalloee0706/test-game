@@ -75,7 +75,7 @@ public class itemUseScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             IceClick1 += 1;
-            Iceitem1.transform.localScale += new Vector3(0.1f, 0.1f);
+            Iceitem1.transform.localScale += new Vector3(0.13f, 0.13f);
             Hpitem1.transform.localScale = new Vector3(0.5f, 0.5f);
             VictoryRockitem1.transform.localScale = new Vector3(1.7f, 1.7f);
             ComboDoubleitem1.transform.localScale = new Vector3(0.5f, 0.5f);
@@ -179,7 +179,7 @@ public class itemUseScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             IceClick2 += 1;
-            Iceitem2.transform.localScale += new Vector3(0.1f, 0.1f);
+            Iceitem2.transform.localScale += new Vector3(0.13f, 0.13f);
             Hpitem2.transform.localScale = new Vector3(0.5f, 0.5f);
             VictoryRockitem2.transform.localScale = new Vector3(1.7f, 1.7f);
             ComboDoubleitem2.transform.localScale = new Vector3(0.5f, 0.5f);

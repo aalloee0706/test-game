@@ -10,6 +10,8 @@ public class GetHit1 : MonoBehaviour
     public GameObject player2;
     public Animator anime1;
 
+
+
     private void Awake()
     {
         itemuseScript = itemscript.GetComponent<itemUseScript>();

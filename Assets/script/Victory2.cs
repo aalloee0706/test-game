@@ -9,6 +9,10 @@ public class Victory2 : MonoBehaviour
     private GameObject HitUI;
     [SerializeField]
     private GameObject GetHitUI;
+
+    public GameObject 谅;
+    public GameObject 快;
+
     public int HitClick = 0;
     public int GetHitClick = 0;
 
@@ -18,12 +22,16 @@ public class Victory2 : MonoBehaviour
     {
         HitUI.SetActive(false);
         GetHitUI.SetActive(false);
+        谅.SetActive(false);
+        快.SetActive(false);
     }
     private void OnEnable()
     {
         Debug.Log("Victory2");
         HitUI.SetActive(true);
         GetHitUI.SetActive(true);
+        谅.SetActive(true);
+        快.SetActive(true);
         GetGold2Win.GetComponent<GoldScript>().Gold2 += 2;
         GetGold2Win.GetComponent<GoldScript>().Gold1 += 3;
     }
@@ -67,6 +75,8 @@ public class Victory2 : MonoBehaviour
             GetHitUI.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             HitUI.SetActive(false);
             GetHitUI.SetActive(false);
+            谅.SetActive(false);
+            快.SetActive(false);
             GetComponent<Hit1>().enabled = true;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow) && GetHitClick == 2)
@@ -75,6 +85,8 @@ public class Victory2 : MonoBehaviour
             GetHitUI.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             HitUI.SetActive(false);
             GetHitUI.SetActive(false);
+            谅.SetActive(false);
+            快.SetActive(false);
             GetComponent<Hit2>().enabled = true;
         }
     }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Hit2 : MonoBehaviour
 {
-    float timer = 0;
+    public float timer = 0;
     public Animator anime1;
+    public AudioSource hitSound2;
 
     private void OnEnable()
     {
@@ -22,6 +23,10 @@ public class Hit2 : MonoBehaviour
         if (timer > 1)
         {
             GetComponent<GetHit2>().enabled = true;
+        }
+        if (timer > 0.2f)
+        {
+            hitSound2.Play();
         }
     }
 }

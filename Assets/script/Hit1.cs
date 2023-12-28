@@ -5,7 +5,8 @@ using UnityEngine;
 public class Hit1 : MonoBehaviour
 {
     public Animator anime2;
-    float timer = 0;
+    public float timer = 0;
+    public AudioSource hitSound1;
 
     private void OnEnable()
     {
@@ -23,6 +24,10 @@ public class Hit1 : MonoBehaviour
         if (timer > 1)
         {
             GetComponent<GetHit1>().enabled = true;
+        }
+        if (timer > 0.2f)
+        {
+            hitSound1.Play();
         }
     }
 }

@@ -93,6 +93,7 @@ public class itemUseScript : MonoBehaviour
                     GetComponent<GoldScript>().Gold1 -= 10;
                     timer = 0;
                     anime1.SetBool("ice", true);
+                    anime1.Play("freeze");
                 }
                 IceClick1 = 0;
             }
@@ -195,6 +196,7 @@ public class itemUseScript : MonoBehaviour
                     GetComponent<GoldScript>().Gold2 -= 10;
                     timer2 = 0;
                     anime2.SetBool("ice", true);
+                    anime2.Play("freeze");
                 }
                 IceClick2 = 0;
             }

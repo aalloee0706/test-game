@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
-
 public class GetHit1 : MonoBehaviour
 {
     public int ComboCount1 = 0;

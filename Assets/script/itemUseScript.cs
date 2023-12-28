@@ -62,12 +62,12 @@ public class itemUseScript : MonoBehaviour
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
 
-        if (timer > 1)
+        if (timer > 0.7f)
         {
             anime1.SetBool("ice", false);
         }
 
-        if (timer2 > 1)
+        if (timer2 > 0.7f)
         {
             anime2.SetBool("ice", false);
         }
@@ -93,7 +93,6 @@ public class itemUseScript : MonoBehaviour
                     GetComponent<GoldScript>().Gold1 -= 10;
                     timer = 0;
                     anime1.SetBool("ice", true);
-                    anime1.Play("freeze");
                 }
                 IceClick1 = 0;
             }
@@ -145,6 +144,8 @@ public class itemUseScript : MonoBehaviour
                     GetComponent<GoldScript>().Gold1 -= 10;
                     masterScript2.enabled = false;
                     masterScript2.Scissor.transform.localScale = new Vector3(2, 2, 2);
+                    masterScript2.Rock.transform.localScale = new Vector3(1, 1, 1);
+                    masterScript2.Paper.transform.localScale = new Vector3(1, 1, 1);
                 }
                 VictoryRockClick1 = 0;
             }
@@ -196,7 +197,6 @@ public class itemUseScript : MonoBehaviour
                     GetComponent<GoldScript>().Gold2 -= 10;
                     timer2 = 0;
                     anime2.SetBool("ice", true);
-                    anime2.Play("freeze");
                 }
                 IceClick2 = 0;
             }
@@ -248,6 +248,8 @@ public class itemUseScript : MonoBehaviour
                     GetComponent<GoldScript>().Gold2 -= 10;
                     masterScript1.enabled = false;
                     masterScript1.Scissor.transform.localScale = new Vector3(2, 2, 2);
+                    masterScript1.Rock.transform.localScale = new Vector3(1, 1, 1);
+                    masterScript1.Paper.transform.localScale = new Vector3(1, 1, 1);
                 }
                 VictoryRockClick2 = 0;
             }

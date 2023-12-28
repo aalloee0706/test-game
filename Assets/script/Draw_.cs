@@ -11,6 +11,8 @@ public class Draw_ : MonoBehaviour
         GetComponent<DrawTextScript>().shortTimer = 0;
         myTimer = 0;
         Debug.Log("Draw");
+        GetComponent<GetHit1>().Health1 += 2;
+        GetComponent<GetHit2>().Health2 += 2;
     }
 
     private void Update()

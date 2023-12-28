@@ -20,7 +20,7 @@ public class GetHit2 : MonoBehaviour
         timer = 0;
         if (anime2.GetBool("ice") == false)
         {
-            Health2 -= Mathf.Pow(GetComponent<GetHit1>().ComboCount1, 2) + GetComponent<GetHit1>().ComboCount1 + 5;
+            Health2 -= Mathf.Pow(GetComponent<GetHit1>().ComboCount1, 2) + GetComponent<GetHit1>().ComboCount1 + 7;
             GetComponent<GetHit1>().ComboCount2 += 1;
             anime2.SetBool("gethit", true);
             anime2.Play("gethit");
@@ -33,8 +33,13 @@ public class GetHit2 : MonoBehaviour
 
     private void Update()
     {
+        if (Health2 > 100)
+        {
+            Health2 = 100;
+        }
+
         timer += Time.deltaTime;
-        if (timer > 0.7)
+        if (timer > 0.3)
         {
             anime2.SetBool("gethit", false);
         }

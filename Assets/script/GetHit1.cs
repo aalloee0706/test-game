@@ -27,6 +27,7 @@ public class GetHit1 : MonoBehaviour
             Health1 -= Mathf.Pow(ComboCount2, 2) + ComboCount2 + 5;
             ComboCount1 += 1;
             anime1.SetBool("gethit", true);
+            anime1.Play("gethit");
         }
 
         ComboCount2 = 0;

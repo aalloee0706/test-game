@@ -13,4 +13,9 @@ public class Scene_Managemant : MonoBehaviour
         {
             SceneManager.LoadScene("Scene_Rule");
         }
+        public void ingametoMain()
+        {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Scene_start");
+        }
 }
